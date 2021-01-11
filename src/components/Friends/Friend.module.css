@@ -1,0 +1,21 @@
+.status {
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin: 0 20px;
+}
+
+.green {
+  composes: status;
+  background-color: green;
+}
+
+.red {
+  composes: status;
+  background-color: red;
+}
+
+.name {
+  margin-left: 20px;
+}

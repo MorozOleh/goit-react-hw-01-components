@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
+import s from './Friend.module.css';
 
 export default function Friend(props) {
-  const { imageUrl, nameFriend, isOnline } = props;
+  const { imageUrl, nameFriend, isOnline} = props;
   return (
     <>
-      <span className="status">{isOnline}</span>
-      <img className="avatar" src={imageUrl} alt="" width="48" />
-      <p className="name">{nameFriend}</p>
+      <span className={isOnline ? s.green : s.red}></span>
+      <img className={s.avatar} src={imageUrl} alt="" width="48" />
+      <p className={s.name}>{nameFriend}</p>
     </>
   );
 }
